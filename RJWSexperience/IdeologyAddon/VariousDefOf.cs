@@ -11,8 +11,6 @@ namespace RJWSexperience.Ideology
     public static class VariousDefOf
     {
         public static readonly JobDef RapeVictim = DefDatabase<JobDef>.GetNamed("RapeVictim");
-        public static readonly JobDef Gangbang = DefDatabase<JobDef>.GetNamed("Gangbang");
-        public static readonly JobDef GettinGangbang = DefDatabase<JobDef>.GetNamed("GettinGangbang");
         public static readonly JobDef DrugSex = DefDatabase<JobDef>.GetNamed("DrugSex");
         public static readonly JobDef GettinDrugSex = DefDatabase<JobDef>.GetNamed("GettinDrugSex");
         public static readonly JobDef DrugMasturbate = DefDatabase<JobDef>.GetNamed("DrugMasturbate");
@@ -36,10 +34,6 @@ namespace RJWSexperience.Ideology
         [MayRequireIdeology] public static readonly HistoryEventDef PromiscuousSex = DefDatabase<HistoryEventDef>.GetNamed("PromiscuousSex");
         [MayRequireIdeology] public static readonly HistoryEventDef Incestuos_Marriage = DefDatabase<HistoryEventDef>.GetNamed("Incestuos_Marriage");
         [MayRequireIdeology] public static readonly HistoryEventDef SexWithCorpse = DefDatabase<HistoryEventDef>.GetNamed("SexWithCorpse");
-        [MayRequireIdeology] public static readonly HistoryEventDef Virgin_TakenF = DefDatabase<HistoryEventDef>.GetNamed("Virgin_TakenF");
-        [MayRequireIdeology] public static readonly HistoryEventDef Virgin_TakenM = DefDatabase<HistoryEventDef>.GetNamed("Virgin_TakenM");
-        [MayRequireIdeology] public static readonly HistoryEventDef Virgin_TookF = DefDatabase<HistoryEventDef>.GetNamed("Virgin_TookF");
-        [MayRequireIdeology] public static readonly HistoryEventDef Virgin_TookM = DefDatabase<HistoryEventDef>.GetNamed("Virgin_TookM");
         [MayRequireIdeology] public static readonly PreceptDef Bestiality_Abhorrent = DefDatabase<PreceptDef>.GetNamed("Bestiality_Abhorrent");
         [MayRequireIdeology] public static readonly PreceptDef Bestiality_Horrible = DefDatabase<PreceptDef>.GetNamed("Bestiality_Horrible");
         [MayRequireIdeology] public static readonly PreceptDef Bestiality_Disapproved = DefDatabase<PreceptDef>.GetNamed("Bestiality_Disapproved");
