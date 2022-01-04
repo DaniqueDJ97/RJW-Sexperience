@@ -21,7 +21,7 @@ namespace RJWSexperience
         public const float SexPerYearDefault = 30;
         public const bool SlavesBeenRapedExpDefault = true;
         public const bool EnableStatRandomizerDefault = true;
-        public const float LustLimitDefault = 500f/3f;
+        public const float LustLimitDefault = 500f / 3f;
         public const float MinSexablePercentDefault = 0.2f;
         public const float VirginRatioDefault = 0.01f;
 
@@ -35,6 +35,8 @@ namespace RJWSexperience
         public static float LustLimit = LustLimitDefault;
         public static float MinSexablePercent = MinSexablePercentDefault;
         public static float VirginRatio = VirginRatioDefault;
+
+        public static bool SelectionLocked = false;
 
         public static void ResettoDefault()
         {
@@ -62,6 +64,7 @@ namespace RJWSexperience
             Scribe_Values.Look(ref LustLimit, "LustLimit", LustLimit, true);
             Scribe_Values.Look(ref MinSexablePercent, "MinSexablePercent", MinSexablePercent, true);
             Scribe_Values.Look(ref VirginRatio, "VirginRatio", VirginRatio, true);
+            Scribe_Values.Look(ref SelectionLocked, "SelectionLocked", SelectionLocked, true);
             base.ExposeData();
         }
     }
@@ -108,7 +111,7 @@ namespace RJWSexperience
             listmain.CheckboxLabeled(Keyed.Option_1_Label, ref Configurations.EnableRecordRandomizer, Keyed.Option_1_Desc);
             if (Configurations.EnableRecordRandomizer)
             {
-                Listing_Standard section = listmain.BeginSection(24f*13f);
+                Listing_Standard section = listmain.BeginSection(24f * 13f);
 
 
                 LabelwithTextfield(section.GetRect(24f), Keyed.Option_3_Label + " " + Configurations.MaxLustDeviation, Keyed.Option_3_Label, ref Configurations.MaxLustDeviation, 0f, 2000f);
@@ -136,8 +139,8 @@ namespace RJWSexperience
                 Adjuster = (int)section.Slider(Adjuster, 0, 2000);
                 Configurations.SexPerYear = Adjuster;
 
-                SliderOption(section.GetRect(48f), Keyed.Option_9_Label + " " + Configurations.MinSexablePercent*100 + "%   " + ThingDefOf.Human.race.lifeExpectancy * Configurations.MinSexablePercent + "years", Keyed.Option_9_Desc, ref Configurations.MinSexablePercent, 0, 1, 1000f);
-                SliderOption(section.GetRect(48f), Keyed.Option_10_Label + " " + Configurations.VirginRatio*100 + "%" , Keyed.Option_10_Desc, ref Configurations.VirginRatio, 0, 1, 1000f);
+                SliderOption(section.GetRect(48f), Keyed.Option_9_Label + " " + Configurations.MinSexablePercent * 100 + "%   " + ThingDefOf.Human.race.lifeExpectancy * Configurations.MinSexablePercent + "years", Keyed.Option_9_Desc, ref Configurations.MinSexablePercent, 0, 1, 1000f);
+                SliderOption(section.GetRect(48f), Keyed.Option_10_Label + " " + Configurations.VirginRatio * 100 + "%", Keyed.Option_10_Desc, ref Configurations.VirginRatio, 0, 1, 1000f);
 
 
                 section.CheckboxLabeled(Keyed.Option_7_Label, ref Configurations.SlavesBeenRapedExp, Keyed.Option_7_Desc);
@@ -154,25 +157,25 @@ namespace RJWSexperience
             Widgets.EndScrollView();
 
         }
-        
+
         public void LabelwithTextfield(Rect rect, string label, string tooltip, ref float value, float min, float max)
         {
             Rect textfieldRect = new Rect(rect.xMax - 100f, rect.y, 100f, rect.height);
             string valuestr = value.ToString();
             Widgets.Label(rect, label);
-            Widgets.TextFieldNumeric(textfieldRect,ref value, ref valuestr, min, max);
+            Widgets.TextFieldNumeric(textfieldRect, ref value, ref valuestr, min, max);
             Widgets.DrawHighlightIfMouseover(rect);
             TooltipHandler.TipRegion(rect, tooltip);
-            
+
         }
 
         public void SliderOption(Rect doublerect, string label, string tooltip, ref float value, float min, float max, float division)
         {
             int Adjuster;
             LabelwithTextfield(doublerect.TopHalf(), label, tooltip, ref value, min, max);
-            Adjuster = (int)(value.Normalization(min,max)*division);
+            Adjuster = (int)(value.Normalization(min, max) * division);
             Adjuster = (int)Widgets.HorizontalSlider(doublerect.BottomHalf(), Adjuster, 0, division);
-            value = (Adjuster / division).Denormalization(min,max);
+            value = (Adjuster / division).Denormalization(min, max);
         }
 
     }

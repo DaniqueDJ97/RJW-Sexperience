@@ -63,6 +63,18 @@
       <HintPath>E:\Other\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>E:\Other\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>E:\Other\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>E:\Other\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>E:\Other\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>E:\Other\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
@@ -77,20 +89,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Buildings.cs" />
+    <Compile Include="Building_Cumbucket.cs" />
     <Compile Include="Configurations.cs" />
     <Compile Include="DebugAction.cs" />
     <Compile Include="Harmony.cs" />
-    <Compile Include="SexHistory.cs" />
+    <Compile Include="IngestionOutcomeDoers.cs" />
+    <Compile Include="JobDrivers.cs" />
+    <Compile Include="JobGiver_Orgy.cs" />
+    <Compile Include="Patches\DefInjection.cs" />
+    <Compile Include="Patches\GetGizmos.cs" />
+    <Compile Include="Patches\Rimworld_Patch.cs" />
+    <Compile Include="Patches\RJW_Patch.cs" />
+    <Compile Include="Recipe_HymenSurgery.cs" />
     <Compile Include="PawnRelationWorkers.cs" />
     <Compile Include="Keyed.cs" />
-    <Compile Include="Rimworld_Patch.cs" />
-    <Compile Include="RJW_Patch.cs" />
+    <Compile Include="RJWUtility.cs" />
+    <Compile Include="SexHistory\HistoryUtility.cs" />
+    <Compile Include="SexHistory\SexHistory.cs" />
     <Compile Include="StatParts.cs" />
+    <Compile Include="Thought_Opinionbased.cs" />
     <Compile Include="Thought_Recordbased.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\RJWUIUtility.cs" />
+    <Compile Include="UI\SexStatus.cs" />
     <Compile Include="Utility.cs" />
     <Compile Include="VariousDefOf.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
