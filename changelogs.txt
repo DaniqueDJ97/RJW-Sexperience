@@ -1,3 +1,6 @@
+Version Beta 1.0.2.4
+ - Sex history tab shows retroactive stats, where possible
+
 Version Beta 1.0.2.3
  - fixed scroll was not worked well
  - memory optimizations

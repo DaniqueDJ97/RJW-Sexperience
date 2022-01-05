@@ -544,7 +544,42 @@ namespace RJWSexperience.UI
             {
                 int sexindex = Sextype[i];
                 p = history.GetAVGSat(sexindex) / BASESAT;
-                string label = Keyed.RS_Sex_Info(Keyed.Sextype[sexindex], history.GetSexCount(sexindex).ToString());
+                float count = 0;
+
+                /*
+                 * Test to see if we can retrieve records
+                 */
+                switch (sexindex)
+                {
+                    case 1:
+                        count = pawn.records.GetValue(VariousDefOf.VaginalSexCount);
+                        break;
+                    case 2:
+                        count = pawn.records.GetValue(VariousDefOf.AnalSexCount);
+                        break;
+                    case 3:
+                        count = pawn.records.GetValue(VariousDefOf.OralSexCount);
+                        break;
+                    case 15:
+                        count = pawn.records.GetValue(VariousDefOf.BlowjobCount);
+                        break;
+                    case 16:
+                        count = pawn.records.GetValue(VariousDefOf.CunnilingusCount);
+                        break;
+                    case 7:
+                        count = pawn.records.GetValue(VariousDefOf.HandjobCount);
+                        break;
+                    case 9:
+                        count = pawn.records.GetValue(VariousDefOf.FingeringCount);
+                        break;
+                    case 8:
+                        count = pawn.records.GetValue(VariousDefOf.FootjobCount);
+                        break;
+                }
+
+                string label = Keyed.RS_Sex_Info(Keyed.Sextype[sexindex], (history.GetSexCount(sexindex) + (int)count).ToString());
+                //string label = Keyed.RS_Sex_Info(Keyed.Sextype[sexindex], history.GetSexCount(sexindex).ToString());
+
                 Rect tmpRect = listmain.GetRect(FONTHEIGHT);
                 FillableBarLabeled(tmpRect,label, p / 2, HistoryUtility.SextypeColor[sexindex], Texture2D.blackTexture, null, Keyed.RS_SAT_AVG(String.Format("{0:P2}", p)));
                 if (Mouse.IsOver(tmpRect))
