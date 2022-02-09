@@ -41,7 +41,7 @@ namespace RJWSexperience
             SolidColorMaterials.NewSolidColorTexture(0.858f, 0.886f, 0.113f, 1.0f),    //Handjob = 7,
             SolidColorMaterials.NewSolidColorTexture(0.752f, 0.780f, 0.000f, 1.0f),    //Footjob = 8,
             SolidColorMaterials.NewSolidColorTexture(0.484f, 0.500f, 0.241f, 1.0f),    //Fingering = 9,
-            SolidColorMaterials.NewSolidColorTexture(0.913f, 0.909f, 0.909f, 1.0f),    //Scissoring = 10,
+            SolidColorMaterials.NewSolidColorTexture(0.713f, 0.709f, 0.709f, 1.0f),    //Scissoring = 10,
             SolidColorMaterials.NewSolidColorTexture(0.588f, 0.576f, 0.431f, 1.0f),    //MutualMasturbation
             SolidColorMaterials.NewSolidColorTexture(0.741f, 0.000f, 0.682f, 1.0f),    //Fisting = 12,
             SolidColorMaterials.NewSolidColorTexture(0.121f, 0.929f, 1.000f, 1.0f),    //MechImplant = 13,

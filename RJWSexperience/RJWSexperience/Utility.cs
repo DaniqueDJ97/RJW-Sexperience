@@ -134,11 +134,11 @@ namespace RJWSexperience
 
             try
             {
-                res = part.FluidAmmount * part.FluidModifier * pawn.BodySize / pawn.RaceProps.baseBodySize * Rand.Range(0.8f, 1.2f) * RJWSettings.cum_on_body_amount_adjust * 0.3f;
+                res = part.FluidAmmount * part.FluidModifier * pawn.BodySize / pawn.RaceProps.baseBodySize * Rand.Range(0.75f, 1.5f) * RJWSettings.cum_on_body_amount_adjust * 2.0f;
             }
             catch (NullReferenceException)
             {
-                res = 0.0f;
+                res = 1.0f;
             }
             if (pawn.Has(Quirk.Messy)) res *= Rand.Range(4.0f, 8.0f);
 

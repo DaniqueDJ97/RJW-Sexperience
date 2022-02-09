@@ -367,7 +367,7 @@ namespace RJWSexperience
 
         public static void AteCum(this Pawn pawn, float amount, bool doDrugEffect = false)
         {
-            pawn.records.AddTo(VariousDefOf.NumofEatenCum, 1);
+            pawn.records.Increment(VariousDefOf.NumofEatenCum);
             pawn.records.AddTo(VariousDefOf.AmountofEatenCum, amount);
             if (doDrugEffect) pawn.CumDrugEffect();
         }

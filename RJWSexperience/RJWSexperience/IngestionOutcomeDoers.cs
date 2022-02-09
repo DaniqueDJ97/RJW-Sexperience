@@ -17,7 +17,9 @@ namespace RJWSexperience
 
         protected override void DoIngestionOutcomeSpecial(Pawn pawn, Thing ingested)
         {
-            pawn.AteCum(ingested.stackCount * unitAmount);
+            pawn.records.Increment(VariousDefOf.NumCumFood);
+            pawn.records.AddTo(VariousDefOf.AmountofEatenCum, ingested.stackCount * unitAmount);
+            pawn.CumDrugEffect();
         }
     }
 }

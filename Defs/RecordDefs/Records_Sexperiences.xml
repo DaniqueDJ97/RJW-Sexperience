@@ -3,22 +3,29 @@
 <Defs>
 	<RecordDef>
 		<defName>NumofEatenCum</defName>
-		<label>swallowed cum</label>
-		<description>The number of times that i swallowed cum.</description>
+		<label>swallowed cum after oral</label>
+		<description>The number of times that I swallowed cum.</description>
+		<type>Int</type>
+	</RecordDef>
+	
+	<RecordDef>
+		<defName>NumCumFood</defName>
+		<label>Ate cum</label>
+		<description>The number of times that I ate cum as food.</description>
 		<type>Int</type>
 	</RecordDef>
 
 	<RecordDef>
 		<defName>AmountofEatenCum</defName>
-		<label>swallowed cum(mL)</label>
-		<description>The amount of cum that i swallowed.</description>
-		<type>Int</type>
+		<label>swallowed cum (mL)</label>
+		<description>The total amount of cum that I swallowed.</description>
+		<type>Float</type>
 	</RecordDef>
 
 	<RecordDef>
 		<defName>Lust</defName>
 		<label>lust</label>
-		<description>How lustful i am.</description>
+		<description>How lustful I am.</description>
 		<type>Float</type>
 	</RecordDef>
 	

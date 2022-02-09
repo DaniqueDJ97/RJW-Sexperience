@@ -578,10 +578,24 @@ namespace RJWSexperience.UI
                 }
 
                 string label = Keyed.RS_Sex_Info(Keyed.Sextype[sexindex], (history.GetSexCount(sexindex) + (int)count).ToString());
+
+                if (sexindex == 1)
+                {
+                    label += String.Format(", {0:0.00} mL", pawn.records.GetValue(VariousDefOf.AmountCreampied));
+                }
+
                 //string label = Keyed.RS_Sex_Info(Keyed.Sextype[sexindex], history.GetSexCount(sexindex).ToString());
 
                 Rect tmpRect = listmain.GetRect(FONTHEIGHT);
-                FillableBarLabeled(tmpRect,label, p / 2, HistoryUtility.SextypeColor[sexindex], Texture2D.blackTexture, null, Keyed.RS_SAT_AVG(String.Format("{0:P2}", p)));
+                if (p > 0)
+                {
+                    FillableBarLabeled(tmpRect, label, p / 2, HistoryUtility.SextypeColor[sexindex], Texture2D.blackTexture, null, Keyed.RS_SAT_AVG(String.Format("{0:P2}", p)));
+                } 
+                else
+                {
+                    FillableBarLabeled(tmpRect, label, 1 / 2, HistoryUtility.SextypeColor[sexindex], Texture2D.blackTexture, null, Keyed.RS_SAT_AVG(String.Format("{0:P2}", p)));
+                }
+                
                 if (Mouse.IsOver(tmpRect))
                 {
                     TooltipHandler.TipRegion(tmpRect, Keyed.RS_LastSex.CapitalizeFirst() + ": " + history.SextypeRecentDays(Sextype[i]));

@@ -11,9 +11,11 @@ namespace RJWSexperience
     public static class VariousDefOf
     {
         public static readonly RecordDef NumofEatenCum = DefDatabase<RecordDef>.GetNamed("NumofEatenCum");
+        public static readonly RecordDef NumCumFood = DefDatabase<RecordDef>.GetNamed("NumCumFood");
         public static readonly RecordDef AmountofEatenCum = DefDatabase<RecordDef>.GetNamed("AmountofEatenCum");
         public static readonly RecordDef Lust = DefDatabase<RecordDef>.GetNamed("Lust");
         public static readonly RecordDef VaginalSexCount = DefDatabase<RecordDef>.GetNamed("VaginalSexCount");          //1
+        public static readonly RecordDef AmountCreampied = DefDatabase<RecordDef>.GetNamed("AmountofCreampied");
         public static readonly RecordDef AnalSexCount = DefDatabase<RecordDef>.GetNamed("AnalSexCount");                //2
         public static readonly RecordDef OralSexCount = DefDatabase<RecordDef>.GetNamed("OralSexCount");                //3
         public static readonly RecordDef BlowjobCount = DefDatabase<RecordDef>.GetNamed("BlowjobCount");                //15
